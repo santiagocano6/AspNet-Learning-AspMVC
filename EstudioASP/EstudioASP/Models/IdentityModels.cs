@@ -29,5 +29,11 @@ namespace EstudioASP.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<EstudioASP.Models.DocumentoModels> DocumentoModels { get; set; }
+
+        public System.Data.Entity.DbSet<EstudioASP.Models.IdiomaModels> IdiomaModels { get; set; }
+
+        public System.Data.Entity.DbSet<EstudioASP.Models.PaisModels> PaisModels { get; set; }
     }
 }

@@ -1,0 +1,90 @@
+﻿@model EstudioASP.Models.DocumentoModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DocumentoModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdiomaModels.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdiomaModels.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaisModels.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaisModels.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Materia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Materia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Universidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Universidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Calificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Calidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
