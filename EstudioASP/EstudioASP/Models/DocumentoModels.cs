@@ -26,9 +26,6 @@ namespace EstudioASP.Models
         public string Materia { get; set; }
 
         [Required]
-        public string Universidad { get; set; }
-
-        [Required]
         [Display(Name = "Calificación")]
         public Calificacion Calificacion { get; set; }
 
@@ -54,5 +51,10 @@ namespace EstudioASP.Models
         [Display(Name = "Idioma")]
         public int IdiomaID { get; set; }
         public virtual IdiomaModels IdiomaModels { get; set; }
+
+        [Required]
+        [Display(Name = "Idioma")]
+        public int UniversidadID { get; set; }
+        public virtual UniversidadModels UniversidadModels { get; set; }
     }
 }

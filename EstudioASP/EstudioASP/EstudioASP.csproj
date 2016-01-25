@@ -182,6 +182,10 @@
     <Compile Include="Migrations\201601241939377_testscr1.Designer.cs">
       <DependentUpon>201601241939377_testscr1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601241949367_testscr2.cs" />
+    <Compile Include="Migrations\201601241949367_testscr2.Designer.cs">
+      <DependentUpon>201601241949367_testscr2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DocumentoModels.cs" />
@@ -189,6 +193,7 @@
     <Compile Include="Models\IdiomaModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PaisModels.cs" />
+    <Compile Include="Models\UniversidadModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -272,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601241939377_testscr1.resx">
       <DependentUpon>201601241939377_testscr1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601241949367_testscr2.resx">
+      <DependentUpon>201601241949367_testscr2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

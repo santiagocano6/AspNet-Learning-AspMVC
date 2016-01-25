@@ -3,15 +3,18 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EstudioASP.Models
 {
-    public class PaisModels
-    { 
+    public class UniversidadModels
+    {
         [Key]
         [Required]
-        public int PaisID { get; set; }
+        public int UniversidadID { get; set; }
         [Required]
         public string Nombre { get; set; }
 
+        [Required]
+        public int PaisId { get; set; }
+        public virtual PaisModels PaisModels { get; set; }
+
         public virtual ICollection<DocumentoModels> DocumentoModels { get; set; }
-        public virtual ICollection<UniversidadModels> UniversidadModels { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace EstudioASP.Controllers
         // GET: Documento
         public ActionResult Index()
         {
-            var documentoModels = db.DocumentoModels.Include(d => d.IdiomaModels).Include(d => d.PaisModels);
+            var documentoModels = db.DocumentoModels.Include(d => d.IdiomaModels).Include(d => d.PaisModels).Include(d => d.UniversidadModels);
             return View(documentoModels.ToList());
         }
 
@@ -41,6 +41,7 @@ namespace EstudioASP.Controllers
         {
             ViewBag.IdiomaID = new SelectList(db.IdiomaModels, "IdiomaID", "Nombre");
             ViewBag.PaisID = new SelectList(db.PaisModels, "PaisID", "Nombre");
+            ViewBag.UniversidadID = new SelectList(db.UniversidadModels, "UniversidadID", "Nombre");
             return View();
         }
 
@@ -49,7 +50,7 @@ namespace EstudioASP.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,NombreDocumento,Materia,Universidad,Calificacion,Calidad,FechaDocumento,FechaCreacion,PaisID,IdiomaID")] DocumentoModels documentoModels)
+        public ActionResult Create([Bind(Include = "ID,NombreDocumento,Materia,Calificacion,Calidad,FechaDocumento,FechaCreacion,PaisID,IdiomaID,UniversidadID")] DocumentoModels documentoModels)
         {
             if (ModelState.IsValid)
             {
@@ -60,6 +61,7 @@ namespace EstudioASP.Controllers
 
             ViewBag.IdiomaID = new SelectList(db.IdiomaModels, "IdiomaID", "Nombre", documentoModels.IdiomaID);
             ViewBag.PaisID = new SelectList(db.PaisModels, "PaisID", "Nombre", documentoModels.PaisID);
+            ViewBag.UniversidadID = new SelectList(db.UniversidadModels, "UniversidadID", "Nombre", documentoModels.UniversidadID);
             return View(documentoModels);
         }
 
@@ -77,6 +79,7 @@ namespace EstudioASP.Controllers
             }
             ViewBag.IdiomaID = new SelectList(db.IdiomaModels, "IdiomaID", "Nombre", documentoModels.IdiomaID);
             ViewBag.PaisID = new SelectList(db.PaisModels, "PaisID", "Nombre", documentoModels.PaisID);
+            ViewBag.UniversidadID = new SelectList(db.UniversidadModels, "UniversidadID", "Nombre", documentoModels.UniversidadID);
             return View(documentoModels);
         }
 
@@ -85,7 +88,7 @@ namespace EstudioASP.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,NombreDocumento,Materia,Universidad,Calificacion,Calidad,FechaDocumento,FechaCreacion,PaisID,IdiomaID")] DocumentoModels documentoModels)
+        public ActionResult Edit([Bind(Include = "ID,NombreDocumento,Materia,Calificacion,Calidad,FechaDocumento,FechaCreacion,PaisID,IdiomaID,UniversidadID")] DocumentoModels documentoModels)
         {
             if (ModelState.IsValid)
             {
@@ -95,6 +98,7 @@ namespace EstudioASP.Controllers
             }
             ViewBag.IdiomaID = new SelectList(db.IdiomaModels, "IdiomaID", "Nombre", documentoModels.IdiomaID);
             ViewBag.PaisID = new SelectList(db.PaisModels, "PaisID", "Nombre", documentoModels.PaisID);
+            ViewBag.UniversidadID = new SelectList(db.UniversidadModels, "UniversidadID", "Nombre", documentoModels.UniversidadID);
             return View(documentoModels);
         }
 
