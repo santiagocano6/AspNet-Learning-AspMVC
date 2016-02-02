@@ -27,16 +27,19 @@
             @Html.DisplayNameFor(model => model.Materia)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Calificacion)
+            @Html.DisplayNameFor(model => model.CalificacionDocumento)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Calidad)
+            @Html.DisplayNameFor(model => model.CalidadDocumento)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FechaDocumento)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FechaCreacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationUserID)
         </th>
         <th></th>
     </tr>
@@ -59,10 +62,10 @@
             @Html.DisplayFor(modelItem => item.Materia)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Calificacion)
+            @Html.DisplayFor(modelItem => item.CalificacionDocumento)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Calidad)
+            @Html.DisplayFor(modelItem => item.CalidadDocumento)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FechaDocumento)
@@ -71,9 +74,12 @@
             @Html.DisplayFor(modelItem => item.FechaCreacion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.DisplayFor(modelItem => item.ApplicationUserID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DocumentoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DocumentoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DocumentoId })
         </td>
     </tr>
 }

@@ -13,7 +13,7 @@ namespace EstudioASP.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201601241928417_Initial"; }
+            get { return "201601280155378_Initial"; }
         }
         
         string IMigrationMetadata.Source

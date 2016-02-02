@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using EstudioASP.Models;
+using System.Web.Security;
 
 namespace EstudioASP.Controllers
 {
@@ -50,10 +51,16 @@ namespace EstudioASP.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,NombreDocumento,Materia,Calificacion,Calidad,FechaDocumento,FechaCreacion,PaisID,IdiomaID,UniversidadID")] DocumentoModels documentoModels)
+        public ActionResult Create([Bind(Include = "DocumentoId,NombreDocumento,Materia,CalificacionDocumento,CalidadDocumento,FechaDocumento,FechaCreacion,PaisID,IdiomaID,UniversidadID,ApplicationUserID")] DocumentoModels documentoModels)
         {
             if (ModelState.IsValid)
             {
+                if (User.Identity.IsAuthenticated)
+                {
+                    documentoModels.ApplicationUserID = (Guid)Membership.GetUser().ProviderUserKey;
+                }
+                documentoModels.FechaCreacion = DateTime.Now;
+
                 db.DocumentoModels.Add(documentoModels);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -88,7 +95,7 @@ namespace EstudioASP.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,NombreDocumento,Materia,Calificacion,Calidad,FechaDocumento,FechaCreacion,PaisID,IdiomaID,UniversidadID")] DocumentoModels documentoModels)
+        public ActionResult Edit([Bind(Include = "DocumentoId,NombreDocumento,Materia,CalificacionDocumento,CalidadDocumento,FechaDocumento,FechaCreacion,PaisID,IdiomaID,UniversidadID,ApplicationUserID")] DocumentoModels documentoModels)
         {
             if (ModelState.IsValid)
             {

@@ -12,9 +12,11 @@ namespace EstudioASP.Models
         public string Nombre { get; set; }
 
         [Required]
-        public int PaisId { get; set; }
+        public int PaisID { get; set; }
         public virtual PaisModels PaisModels { get; set; }
 
         public virtual ICollection<DocumentoModels> DocumentoModels { get; set; }
+        public virtual ICollection<ApplicationUser> ApplicationUser { get; set; }
+        //public virtual ICollection<RegisterViewModel> RegisterViewModel { get; set; }
     }
 }

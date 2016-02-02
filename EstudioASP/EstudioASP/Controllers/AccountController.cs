@@ -151,7 +151,7 @@ namespace EstudioASP.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Nombre, Email = model.Email, /*PaisID = model.PaisID, IdiomaID = model.IdiomaID, UniversidadID = model.UniversidadID */};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

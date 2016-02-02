@@ -16,7 +16,7 @@ namespace EstudioASP.Models
     {
         [Key]
         [Required(ErrorMessage = "ID es requerido.")]
-        public int ID { get; set; }
+        public int DocumentoId { get; set; }
 
         [Required]
         [Display(Name = "Nombre documento")]
@@ -27,9 +27,10 @@ namespace EstudioASP.Models
 
         [Required]
         [Display(Name = "Calificación")]
-        public Calificacion Calificacion { get; set; }
+        public Calificacion CalificacionDocumento { get; set; }
 
-        public Calidad Calidad { get; set; }
+        [Required]
+        public Calidad CalidadDocumento { get; set; }
 
         [Required]
         [Display(Name = "Fecha Documento")]
@@ -53,8 +54,13 @@ namespace EstudioASP.Models
         public virtual IdiomaModels IdiomaModels { get; set; }
 
         [Required]
-        [Display(Name = "Idioma")]
-        public int UniversidadID { get; set; }
+        [Display(Name = "Universidad")]
+        public int? UniversidadID { get; set; }
         public virtual UniversidadModels UniversidadModels { get; set; }
+
+        [Display(Name = "Usuario")]
+        [Editable(false, AllowInitialValue = false)]
+        public Guid? ApplicationUserID { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }

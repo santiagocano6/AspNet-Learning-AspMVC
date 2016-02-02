@@ -7,13 +7,13 @@ namespace EstudioASP.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class testscr2 : IMigrationMetadata
+    public sealed partial class _1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(testscr2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201601241949367_testscr2"; }
+            get { return "201601280214569_1"; }
         }
         
         string IMigrationMetadata.Source

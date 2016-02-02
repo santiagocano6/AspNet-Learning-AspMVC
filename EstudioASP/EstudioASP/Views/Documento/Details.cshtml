@@ -51,19 +51,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Calificacion)
+            @Html.DisplayNameFor(model => model.CalificacionDocumento)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Calificacion)
+            @Html.DisplayFor(model => model.CalificacionDocumento)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Calidad)
+            @Html.DisplayNameFor(model => model.CalidadDocumento)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Calidad)
+            @Html.DisplayFor(model => model.CalidadDocumento)
         </dd>
 
         <dt>
@@ -82,9 +82,17 @@
             @Html.DisplayFor(model => model.FechaCreacion)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUserID)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DocumentoId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

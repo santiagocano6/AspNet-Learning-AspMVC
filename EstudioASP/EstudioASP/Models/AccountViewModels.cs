@@ -79,6 +79,21 @@ namespace EstudioASP.Models
         [Display(Name = "Confirmar contraseña")]
         [Compare("Password", ErrorMessage = "La contraseña y la contraseña de confirmación no coinciden.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        public string Nombre { get; set; }
+
+        //[Required]
+        //public int IdiomaID { get; set; }
+        //public virtual IdiomaModels IdiomaModels { get; set; }
+
+        //[Required]
+        //public int UniversidadID { get; set; }
+        //public virtual UniversidadModels UniversidadModels { get; set; }
+
+        //[Required]
+        //public int PaisID { get; set; }
+        //public virtual PaisModels PaisModels { get; set; }
     }
 
     public class ResetPasswordViewModel

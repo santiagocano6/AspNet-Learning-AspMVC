@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{44E12847-5A82-4F40-AE91-3584C280D899}</ProjectGuid>
+    <ProjectGuid>{B96F1AC2-6414-43A6-9D5D-8F879C9D88E0}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -174,17 +174,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201601241928417_Initial.cs" />
-    <Compile Include="Migrations\201601241928417_Initial.Designer.cs">
-      <DependentUpon>201601241928417_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201601280155378_Initial.cs" />
+    <Compile Include="Migrations\201601280155378_Initial.Designer.cs">
+      <DependentUpon>201601280155378_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201601241939377_testscr1.cs" />
-    <Compile Include="Migrations\201601241939377_testscr1.Designer.cs">
-      <DependentUpon>201601241939377_testscr1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201601241949367_testscr2.cs" />
-    <Compile Include="Migrations\201601241949367_testscr2.Designer.cs">
-      <DependentUpon>201601241949367_testscr2.cs</DependentUpon>
+    <Compile Include="Migrations\201601280214569_1.cs" />
+    <Compile Include="Migrations\201601280214569_1.Designer.cs">
+      <DependentUpon>201601280214569_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -198,10 +194,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-EstudioASP-20160120095827.mdf" />
-    <Content Include="App_Data\aspnet-EstudioASP-20160120095827_log.ldf">
-      <DependentUpon>aspnet-EstudioASP-20160120095827.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -210,7 +202,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="DiagramaClases.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -264,6 +255,9 @@
     <Content Include="Views\Documento\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -272,18 +266,12 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601241928417_Initial.resx">
-      <DependentUpon>201601241928417_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601280155378_Initial.resx">
+      <DependentUpon>201601280155378_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201601241939377_testscr1.resx">
-      <DependentUpon>201601241939377_testscr1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601280214569_1.resx">
+      <DependentUpon>201601280214569_1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201601241949367_testscr2.resx">
-      <DependentUpon>201601241949367_testscr2.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logica\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -301,9 +289,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51151</DevelopmentServerPort>
+          <DevelopmentServerPort>50050</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51151/</IISUrl>
+          <IISUrl>http://localhost:50050/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
