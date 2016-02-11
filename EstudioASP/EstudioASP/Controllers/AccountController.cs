@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using EstudioASP.Models;
+using System.Collections.Generic;
 
 namespace EstudioASP.Controllers
 {
@@ -17,6 +18,7 @@ namespace EstudioASP.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         public AccountController()
         {
@@ -139,6 +141,7 @@ namespace EstudioASP.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.PaisID = new SelectList(db.PaisModels, "PaisID", "Nombre");
             return View();
         }
 
@@ -151,7 +154,7 @@ namespace EstudioASP.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Nombre, Email = model.Email, /*PaisID = model.PaisID, IdiomaID = model.IdiomaID, UniversidadID = model.UniversidadID */};
+                var user = new ApplicationUser { UserName = model.Nombre, Email = model.Email/*, PaisID = model.PaisID, IdiomaID = model.IdiomaID, UniversidadID = model.UniversidadID*/ };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

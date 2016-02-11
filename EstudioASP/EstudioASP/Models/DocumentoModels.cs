@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EstudioASP.Models
 {
@@ -12,6 +13,7 @@ namespace EstudioASP.Models
         Alta = 3, Media = 2, Baja = 1
     }
 
+    [Table("Documento")]
     public class DocumentoModels
     {
         [Key]

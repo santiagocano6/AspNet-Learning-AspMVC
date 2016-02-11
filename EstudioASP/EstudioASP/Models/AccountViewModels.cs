@@ -91,9 +91,8 @@ namespace EstudioASP.Models
         //public int UniversidadID { get; set; }
         //public virtual UniversidadModels UniversidadModels { get; set; }
 
-        //[Required]
-        //public int PaisID { get; set; }
-        //public virtual PaisModels PaisModels { get; set; }
+        [Required]
+        public int PaisID { get; set; }
     }
 
     public class ResetPasswordViewModel

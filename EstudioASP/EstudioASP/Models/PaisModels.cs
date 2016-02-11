@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EstudioASP.Models
 {
+    [Table("Pais")]
     public class PaisModels
     {
         [Key]
@@ -14,6 +16,6 @@ namespace EstudioASP.Models
         public virtual ICollection<DocumentoModels> DocumentoModels { get; set; }
         public virtual ICollection<UniversidadModels> UniversidadModels { get; set; }
         public virtual ICollection<ApplicationUser> ApplicationUser { get; set; }
-        //public virtual ICollection<RegisterViewModel> RegisterViewModel { get; set; }
+        public virtual ICollection<RegisterViewModel> RegisterViewModel { get; set; }
     }
 }
