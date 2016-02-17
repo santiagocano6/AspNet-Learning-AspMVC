@@ -83,13 +83,11 @@ namespace EstudioASP.Models
         [Required]
         public string Nombre { get; set; }
 
-        //[Required]
-        //public int IdiomaID { get; set; }
-        //public virtual IdiomaModels IdiomaModels { get; set; }
+        [Required]
+        public int IdiomaID { get; set; }
 
-        //[Required]
-        //public int UniversidadID { get; set; }
-        //public virtual UniversidadModels UniversidadModels { get; set; }
+        [Required]
+        public int UniversidadID { get; set; }
 
         [Required]
         public int PaisID { get; set; }

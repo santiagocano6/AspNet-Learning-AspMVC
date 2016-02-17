@@ -142,6 +142,8 @@ namespace EstudioASP.Controllers
         public ActionResult Register()
         {
             ViewBag.PaisID = new SelectList(db.PaisModels, "PaisID", "Nombre");
+            ViewBag.IdiomaID = new SelectList(db.IdiomaModels, "IdiomaID", "Nombre");
+            ViewBag.UniversidadID = new SelectList(db.UniversidadModels, "UniversidadID", "Nombre");
             return View();
         }
 
@@ -154,7 +156,7 @@ namespace EstudioASP.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Nombre, Email = model.Email/*, PaisID = model.PaisID, IdiomaID = model.IdiomaID, UniversidadID = model.UniversidadID*/ };
+                var user = new ApplicationUser { UserName = model.Nombre, Email = model.Email, PaisID = model.PaisID, IdiomaID = model.IdiomaID, UniversidadID = model.UniversidadID };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -170,6 +172,10 @@ namespace EstudioASP.Controllers
                 }
                 AddErrors(result);
             }
+
+            ViewBag.PaisID = new SelectList(db.PaisModels, "PaisID", "Nombre");
+            ViewBag.IdiomaID = new SelectList(db.IdiomaModels, "IdiomaID", "Nombre");
+            ViewBag.UniversidadID = new SelectList(db.UniversidadModels, "UniversidadID", "Nombre");
 
             // Si llegamos a este punto, es que se ha producido un error y volvemos a mostrar el formulario
             return View(model);

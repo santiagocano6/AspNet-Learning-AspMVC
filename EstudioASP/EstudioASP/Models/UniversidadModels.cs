@@ -19,6 +19,6 @@ namespace EstudioASP.Models
 
         public virtual ICollection<DocumentoModels> DocumentoModels { get; set; }
         public virtual ICollection<ApplicationUser> ApplicationUser { get; set; }
-        //public virtual ICollection<RegisterViewModel> RegisterViewModel { get; set; }
+
     }
 }
