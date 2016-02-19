@@ -171,6 +171,7 @@
     <Compile Include="Controllers\DocumentoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,12 +187,17 @@
     <Compile Include="Migrations\201602170328508_2.Designer.cs">
       <DependentUpon>201602170328508_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602191811055_3.cs" />
+    <Compile Include="Migrations\201602191811055_3.Designer.cs">
+      <DependentUpon>201602191811055_3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DocumentoModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IdiomaModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NewsModels.cs" />
     <Compile Include="Models\PaisModels.cs" />
     <Compile Include="Models\UniversidadModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -257,6 +263,13 @@
     <Content Include="Views\Documento\Details.cshtml" />
     <Content Include="Views\Documento\Edit.cshtml" />
     <Content Include="Views\Documento\Index.cshtml" />
+    <Content Include="Views\Home\_News.cshtml" />
+    <Content Include="Views\News\Create.cshtml" />
+    <Content Include="Views\News\Delete.cshtml" />
+    <Content Include="Views\News\Details.cshtml" />
+    <Content Include="Views\News\Edit.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Shared\_NewsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -278,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602170328508_2.resx">
       <DependentUpon>201602170328508_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602191811055_3.resx">
+      <DependentUpon>201602191811055_3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

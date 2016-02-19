@@ -1,0 +1,42 @@
+﻿@model EstudioASP.Models.NewsModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NewsModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TituloNoticia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TituloNoticia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DetalleNoticia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetalleNoticia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RutaImagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RutaImagen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NoticiaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

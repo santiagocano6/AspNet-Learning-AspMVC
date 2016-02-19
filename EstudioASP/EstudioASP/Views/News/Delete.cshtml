@@ -1,0 +1,48 @@
+﻿@model EstudioASP.Models.NewsModels
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>NewsModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TituloNoticia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TituloNoticia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DetalleNoticia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetalleNoticia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RutaImagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RutaImagen)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
