@@ -1,59 +1,40 @@
 ﻿@model IEnumerable<EstudioASP.Models.DocumentoModels>
 
-@{
-    ViewBag.Title = "Documentación";
-}
-
-<br />
-<h4>Buscador de la documentación</h4>
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
-@using (Html.BeginForm(null, null, FormMethod.Get))
-{
-    <fieldset>
-        @Html.Label("Buscar", "Nombre: ")
-        @Html.TextBox("filtroBusqueda")
-        <input type="submit" value="Buscar" />
-
-    </fieldset>
-}
-
-<br />
 <table class="table">
     <tr>
         <th>
-            Idioma
+            @Html.DisplayNameFor(model => model.IdiomaModels.Nombre)
         </th>
-        @*<th>
-            Pais
-        </th>*@
-        @*<th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaisModels.Nombre)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.UniversidadModels.Nombre)
-        </th>*@
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.NombreDocumento)
         </th>
-        @*<th>
+        <th>
             @Html.DisplayNameFor(model => model.Materia)
-        </th>*@
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.CalificacionDocumento)
         </th>
-        @*<th>
+        <th>
             @Html.DisplayNameFor(model => model.CalidadDocumento)
-        </th>*@
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.FechaDocumento)
         </th>
-        @*<th>
+        <th>
             @Html.DisplayNameFor(model => model.FechaCreacion)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ApplicationUserID)
-        </th>*@
+        </th>
         <th></th>
     </tr>
 
@@ -62,37 +43,37 @@
         <td>
             @Html.DisplayFor(modelItem => item.IdiomaModels.Nombre)
         </td>
-        @*<td>
+        <td>
             @Html.DisplayFor(modelItem => item.PaisModels.Nombre)
-        </td>*@
-        @*<td>
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.UniversidadModels.Nombre)
-        </td>*@
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.NombreDocumento)
         </td>
-        @*<td>
+        <td>
             @Html.DisplayFor(modelItem => item.Materia)
-        </td>*@
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.CalificacionDocumento)
         </td>
-        @*<td>
+        <td>
             @Html.DisplayFor(modelItem => item.CalidadDocumento)
-        </td>*@
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.FechaDocumento)
         </td>
-        @*<td>
+        <td>
             @Html.DisplayFor(modelItem => item.FechaCreacion)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ApplicationUserID)
-        </td>*@
+        </td>
         <td>
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.DocumentoId }) |*@
-            @Html.ActionLink("Ver detalle", "Details", new { id=item.DocumentoId })
-            @*@Html.ActionLink("Delete", "Delete", new { id=item.DocumentoId })*@
+            @Html.ActionLink("Edit", "Edit", new { id=item.DocumentoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DocumentoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DocumentoId })
         </td>
     </tr>
 }

@@ -15,11 +15,37 @@ namespace EstudioASP.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Documento
-        public ActionResult Index()
+        public ActionResult _ObtenerLosUltimosCargados()
         {
-            var documentoModels = db.DocumentoModels.Include(d => d.IdiomaModels).Include(d => d.PaisModels).Include(d => d.UniversidadModels);
-            return View(documentoModels.ToList());
+            var documentoModels = db.DocumentoModels.Include(d => d.IdiomaModels).Include(d => d.PaisModels).Include(d => d.UniversidadModels).
+                OrderByDescending(x => x.FechaCreacion).Take(100);
+
+            //return View(documentoModels.ToList(), "DocumentoModels");
+            return View();
+        }
+
+        // GET: Documento
+        public ActionResult Index(string filtroBusqueda)
+        {
+            if (filtroBusqueda == null || filtroBusqueda == string.Empty)
+            {
+                var documentoModels =
+                db.DocumentoModels.Include(d => d.IdiomaModels)
+                .Include(d => d.PaisModels)
+                .Include(d => d.UniversidadModels);
+
+                return View(documentoModels.ToList());
+            }
+            else
+            {
+                var documentoModels =
+                db.DocumentoModels.Include(d => d.IdiomaModels)
+                .Include(d => d.PaisModels)
+                .Include(d => d.UniversidadModels)
+                .Where(d => d.NombreDocumento.Contains(filtroBusqueda));
+
+                return View(documentoModels.ToList());
+            }
         }
 
         // GET: Documento/Details/5

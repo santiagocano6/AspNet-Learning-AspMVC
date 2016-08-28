@@ -49,9 +49,8 @@ namespace EstudioASP.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Correo electrónico")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Usuario")]
+        public string Usuario { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

@@ -49,5 +49,7 @@ namespace EstudioASP.Models
         public System.Data.Entity.DbSet<EstudioASP.Models.PaisModels> PaisModels { get; set; }
 
         public System.Data.Entity.DbSet<EstudioASP.Models.UniversidadModels> UniversidadModels { get; set; }
+
+        public System.Data.Entity.DbSet<EstudioASP.Models.NoticiaModels> NoticiaModels { get; set; }
     }
 }
