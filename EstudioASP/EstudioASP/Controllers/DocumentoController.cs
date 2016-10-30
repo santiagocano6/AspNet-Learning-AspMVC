@@ -60,6 +60,9 @@ namespace EstudioASP.Controllers
             {
                 return HttpNotFound();
             }
+
+            string aux = documentoModels.Descripcion;
+
             return View(documentoModels);
         }
 
@@ -77,7 +80,7 @@ namespace EstudioASP.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "DocumentoId,NombreDocumento,Materia,CalificacionDocumento,CalidadDocumento,FechaDocumento,FechaCreacion,PaisID,IdiomaID,UniversidadID,ApplicationUserID")] DocumentoModels documentoModels)
+        public ActionResult Create([Bind(Include = "DocumentoId,NombreDocumento,Materia,CalificacionDocumento,CalidadDocumento,FechaDocumento,FechaCreacion,PaisID,IdiomaID,UniversidadID,ApplicationUserID,Descripcion,Link")] DocumentoModels documentoModels)
         {
             if (ModelState.IsValid)
             {
@@ -121,7 +124,7 @@ namespace EstudioASP.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "DocumentoId,NombreDocumento,Materia,CalificacionDocumento,CalidadDocumento,FechaDocumento,FechaCreacion,PaisID,IdiomaID,UniversidadID,ApplicationUserID")] DocumentoModels documentoModels)
+        public ActionResult Edit([Bind(Include = "DocumentoId,NombreDocumento,Materia,CalificacionDocumento,CalidadDocumento,FechaDocumento,FechaCreacion,PaisID,IdiomaID,UniversidadID,ApplicationUserID,Descripcion,Link")] DocumentoModels documentoModels)
         {
             if (ModelState.IsValid)
             {

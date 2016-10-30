@@ -64,5 +64,14 @@ namespace EstudioASP.Models
         [Editable(false, AllowInitialValue = false)]
         public Guid? ApplicationUserID { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
+
+        [Required]
+        [Display(Name = "Descripcion")]
+        [DataType(DataType.MultilineText)]
+        public string Descripcion { get; set; }
+
+        [Required]
+        [Display(Name = "Link")]
+        public string Link { get; set; }
     }
 }

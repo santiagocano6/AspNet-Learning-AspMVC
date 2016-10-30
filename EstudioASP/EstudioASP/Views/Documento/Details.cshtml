@@ -11,28 +11,28 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.IdiomaModels.Nombre)
+            Idioma
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.IdiomaModels.Nombre)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.PaisModels.Nombre)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.PaisModels.Nombre)
-        </dd>
+        </dd>*@
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.UniversidadModels.Nombre)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.UniversidadModels.Nombre)
-        </dd>
+        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.NombreDocumento)
@@ -42,13 +42,13 @@
             @Html.DisplayFor(model => model.NombreDocumento)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.Materia)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Materia)
-        </dd>
+        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.CalificacionDocumento)
@@ -58,13 +58,13 @@
             @Html.DisplayFor(model => model.CalificacionDocumento)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.CalidadDocumento)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.CalidadDocumento)
-        </dd>
+        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.FechaDocumento)
@@ -74,21 +74,39 @@
             @Html.DisplayFor(model => model.FechaDocumento)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.FechaCreacion)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.FechaCreacion)
-        </dd>
+        </dd>*@
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.ApplicationUserID)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.ApplicationUserID)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+
+        <dd>
+            @Html.RouteLink("google.com", "")
+        </dd>
+
+
 
     </dl>
 </div>
