@@ -61,8 +61,6 @@ namespace EstudioASP.Controllers
                 return HttpNotFound();
             }
 
-            string aux = documentoModels.Descripcion;
-
             return View(documentoModels);
         }
 

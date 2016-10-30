@@ -39,21 +39,24 @@
         @*<th>
             @Html.DisplayNameFor(model => model.Materia)
         </th>*@
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.CalificacionDocumento)
-        </th>
+        </th>*@
         @*<th>
             @Html.DisplayNameFor(model => model.CalidadDocumento)
         </th>*@
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.FechaDocumento)
-        </th>
+        </th>*@
         @*<th>
             @Html.DisplayNameFor(model => model.FechaCreacion)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ApplicationUserID)
         </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
         <th></th>
     </tr>
 
@@ -74,21 +77,24 @@
         @*<td>
             @Html.DisplayFor(modelItem => item.Materia)
         </td>*@
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.CalificacionDocumento)
-        </td>
+        </td>*@
         @*<td>
             @Html.DisplayFor(modelItem => item.CalidadDocumento)
         </td>*@
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.FechaDocumento)
-        </td>
+        </td>*@
         @*<td>
             @Html.DisplayFor(modelItem => item.FechaCreacion)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ApplicationUserID)
         </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
         <td>
             @*@Html.ActionLink("Edit", "Edit", new { id=item.DocumentoId }) |*@
             @Html.ActionLink("Ver detalle", "Details", new { id=item.DocumentoId })
