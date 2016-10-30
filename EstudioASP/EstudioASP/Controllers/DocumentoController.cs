@@ -25,6 +25,7 @@ namespace EstudioASP.Controllers
         }
 
         // GET: Documento
+        [Authorize]
         public ActionResult Index(string filtroBusqueda)
         {
             if (filtroBusqueda == null || filtroBusqueda == string.Empty)
